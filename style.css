@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.card {
+  height: 300px;
+  width: 250px;
+  color: #fff;
+}
+
+.card-1 {
+  background: url("media/adam-neumann-qOVD7jkzS2o-unsplash.jpg");
+  background-position: center;
+}
+
+.card-2 {
+  background: url("media/ashkan-forouzani-etGxX5WGoNo-unsplash.jpg");
+  background-position: center;
+}
+
+.card-3 {
+  background: url("media/karsten-winegeart-k_iCwPHFkzg-unsplash.jpg");
+  background-position: center;
+}
+
+.card-4 {
+  background: url("media/braxton-apana-iZ7MhYz3b4Y-unsplash.jpg");
+  background-position: center;
+}
+
+.card-5 {
+  background: url("media/martin-wettstein-HrLHBqrnefc-unsplash.jpg");
+  background-position: center;
+}
+
+.card-6 {
+  background: url("media/pawel-czerwinski-9lNoGFaNI2c-unsplash.jpg");
+  background-position: center;
+}
+
+.overlay {
+  height: 300px;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  opacity: 0;
+  color: #fff;
+}
+
+.text {
+  padding: 1rem;
+  opacity: 0;
+}
+
+.img-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: all 300ms;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
